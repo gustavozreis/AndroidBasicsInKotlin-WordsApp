@@ -13,9 +13,8 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
+@RunWith(AndroidJUnit4::class)
 class NavigationTests {
-
-    //@RunWith(AndroidJUnit4::class)
 
     @get:Rule
     val activity = ActivityScenarioRule(MainActivity::class.java)
@@ -31,6 +30,7 @@ class NavigationTests {
         onView(withId(R.id.recycler_view))
             .perform(RecyclerViewActions
                 .actionOnItemAtPosition<RecyclerView.ViewHolder>(25, click()))
+        onView(withText("Words That Start With C")).check(matches(isDisplayed()))
 
     }
 
