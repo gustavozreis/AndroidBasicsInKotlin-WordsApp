@@ -86,7 +86,7 @@ class WordAdapter(private val letterId: String, context: Context) :
 
         // Inserir onClickListenet no botão com URI para pagina de dicionário do Google
         holder.button.setOnClickListener {
-            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            val queryUrl: Uri = Uri.parse("${WordListFragment.SEARCH_PREFIX}${item}")
             // criar intent implicito
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
             // transmitir a intent
